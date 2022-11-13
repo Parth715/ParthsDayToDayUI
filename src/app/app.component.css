@@ -1,0 +1,13 @@
+.container {
+    width: 100%;
+    display: flex;
+    gap: var(--gap);
+    flex-wrap: wrap;
+    flex-basis:content;
+    height: 100vh;
+}
+
+div {
+    width: 300px;
+    justify-content: center;
+}
