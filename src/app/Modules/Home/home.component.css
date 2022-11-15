@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    display: flex;
+    gap: var(--gap);
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+div {
+    width: 300px;
+    justify-content: center;
+}
+
+.stock {
+    height: 200px;
+    width: 200px;   
+    background-image: url('../../../assets/photos/tos.png');
+    background-size: contain;
+    border-radius: 18px;
+    transition: .15s;
+}
+
+.stock:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
