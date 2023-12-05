@@ -1,1 +1,32 @@
-<p>stock-journal works!</p>
+<app-header></app-header>
+<div>
+    <table class="table default">
+        <thead>
+            <th>Date</th>
+            <th>Ticker</th>
+            <th>Buy Price</th>
+            <th>Sell Price</th>
+            <th>Realized Gain/Loss</th>
+            <th>Reason for entry</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stock of stocks">
+                <td>{{stock.date | date}}</td>
+                <td>{{stock.ticker}}</td>
+                <td>{{stock.buy | currency}}</td>
+                <td>{{stock.sell | currency}}</td>
+                <td [ngClass]="{'positive' : stock.realized > 0, 
+                                'negative' : stock.realized < 0}">{{stock.realized | currency}}</td>
+                <td>{{stock.reason}}</td>
+            </tr>
+            <tr (keypress)="keypressed($event)">
+                <td><input type="date" [(ngModel)]="addNew.date" placeholder="Add Date"></td>
+                <td><input [(ngModel)]="addNew.ticker" placeholder="Ticker Symbol"></td>
+                <td><input [(ngModel)]="addNew.buy" placeholder="Buy Price"></td>
+                <td><input [(ngModel)]="addNew.sell" placeholder="Sell Price"></td>
+                <td><input [(ngModel)]="addNew.realized" placeholder="Realized Profit/Loss" disabled></td>
+                <td><textarea type="input" class="textbox" [(ngModel)]="addNew.reason" placeholder="Ticker reason"></textarea></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

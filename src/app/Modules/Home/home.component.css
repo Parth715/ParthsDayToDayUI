@@ -3,7 +3,10 @@
     display: flex;
     gap: var(--gap);
     flex-wrap: wrap;
-    height: 100vh;
+    max-height: 100vh;
+    margin-top: 5%;
+    background-color: lightgray;
+    border-radius: 8px;
 }
 
 div {
@@ -18,9 +21,42 @@ div {
     background-size: contain;
     border-radius: 18px;
     transition: .15s;
+    margin-top: 5%;
 }
 
 .stock:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.house {
+    height: 200px;
+    width: 200px;   
+    background-image: url('../../../assets/photos/House.jpg');
+    background-size:cover;
+    border-radius: 18px;
+    transition: .15s;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.house:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.car {
+    height: 200px;
+    width: 200px;   
+    background-image: url('../../../assets/photos/car.webp');
+    background-size:cover;
+    background-position: 50%;
+    border-radius: 18px;
+    transition: .15s;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.car:hover {
     cursor: pointer;
     transform: scale(1.1);
 }

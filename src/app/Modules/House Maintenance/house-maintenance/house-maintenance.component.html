@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div>
+    <table class="table default">
+        <head>
+            <th>Task</th>
+            <th>Last Completed</th>
+            <th>When to do</th>
+        </head>
+        <tbody>
+            <tr *ngFor="let task of maintanence">
+                <th>task.task</th>
+                <th>task.lastComplete</th>
+                <th>task.toComplete</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </tbody>
+    </table>
+</div>

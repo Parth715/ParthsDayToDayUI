@@ -1,0 +1,13 @@
+:root {
+    --green: #008000;
+    --red: #ff0000;
+    --yellow: #ffff00;
+}
+
+.positive {
+    color: var(--green)
+}
+
+.negative{
+    color: --red;
+}

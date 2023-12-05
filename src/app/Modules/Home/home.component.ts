@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,15 +6,19 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   constructor(private router: Router){}
-
-  public stockRedirect(): void {
-    this.router.navigateByUrl("/stocks");
-  };
-
-  ngOnInit(): void {
+  
+  public stockRoute(): void{
+    this.router.navigate(["/stocks"]);
   }
 
+  public houseRoute(): void{
+    this.router.navigate(["/house"]);
+  }
+
+  public carRoute(): void{
+    this.router.navigate(["/car"]);
+  }
 }
